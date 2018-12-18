@@ -1,0 +1,204 @@
+page {
+  height: 100%;
+  background: #98ccfe;
+}
+
+.container {
+  background-size: auto 100%;
+}
+
+.top {
+  width: 100%;
+  box-shadow: 0 8rpx 8rpx #555;
+  position: fixed;
+  display: flex;
+  background: #98ccfe;
+}
+
+.two {
+  width: 700rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rpx;
+}
+
+.two1 {
+  width: 350rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(top, #3fa0fe, #3da2fc, #3cbcf9);
+  border-bottom: 4px solid #f8ffeb;
+  border-right: 1px solid #2e84d9;
+}
+
+.two2 {
+  width: 350rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #4c9cff;
+  border-bottom: 4px solid #afd1f6;
+}
+
+.bottom {
+  width: 95%;
+  box-shadow: 0rpx -7rpx 25rpx #777;
+  position: fixed;
+  display: flex;
+  background: -webkit-linear-gradient(top, #80befe, #5993ff, #3c73ff);
+  top: 94%;
+  height: 80rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.username_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 130rpx;
+}
+
+.step {
+  min-width: 120rpx;
+  text-align: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background: #f3f683;
+  border-radius: 15rpx;
+  box-shadow: 0 3rpx 3rpx #444;
+}
+
+.userinfo-avatar {
+  width: 96rpx;
+  height: 96rpx;
+  margin: 2rpx;
+  border-radius: 15rpx;
+  background: #bb92e0;
+}
+
+.item {
+  height: auto;
+  width: 680rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15rpx;
+}
+
+.first {
+  height: 80rpx;
+  font-size: 50rpx;
+}
+
+.second {
+  height: auto;
+}
+
+.third {
+  width: 580rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  background: #4a71d2;
+  box-shadow: 0 3rpx 3rpx #444;
+}
+
+.second_content {
+  width: 640rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15rpx;
+  padding: 0 20rpx;
+  box-shadow: 0 3rpx 3rpx #444;
+  background: -webkit-linear-gradient(top, #e1b23c, #ffe292, #ffcd50);
+  margin: 0 0 25rpx;
+}
+
+.comecity {
+  border-radius: 15rpx;
+  border: 1px solid #d79d4b;
+  border-bottom: 1px solid #fbe9c1;
+  border-right: 1px solid #fee39c;
+  width: 230rpx;
+  text-align: left;
+  align-items: center;
+  justify-content: row;
+  padding-left: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #8e5b08;
+}
+
+.userIndex {
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160rpx;
+}
+
+.jinjiang {
+  width: 110rpx;
+  height: 150rpx;
+}
+
+.my_nickname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.my_nickname_hover {
+  overflow: show;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tiepai {
+  display: flex;
+  height: 160rpx;
+  justify-content: center;
+  position: relative;
+}
+
+.mingci{
+  position: absolute;
+  top:48% ;
+  left:42%;
+}
+
+
+.mingci2{
+  position: absolute;
+  top:48% ;
+  left:36%;
+}

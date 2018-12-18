@@ -1,0 +1,133 @@
+page {
+  color: #fff;
+  background: #98ccfe;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% auto;
+}
+
+.item {
+  height: 130rpx;
+  width: 660rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  /* border-radius: 20rpx;*/
+}
+
+.first {
+  height: 80rpx;
+  font-size: 45rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.second {
+  height: 150rpx;
+  border-bottom: 4rpx solid #f0ffff;
+  background: -webkit-linear-gradient(top, #40a1ff, #38a3f1, #61aff9) ;
+  justify-content: center;
+  font-size: 50rpx;
+  position: fixed;
+  margin: 0;
+  left: 25rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  box-shadow: 0 3rpx 3rpx #444;
+  z-index: 100;
+  padding: 22rpx;
+}*/
+
+.second {
+  height: 80rpx;
+  background: -webkit-linear-gradient(top, #40a1ff, #38a3f1, #61aff9) #4b7eff;
+  justify-content: center;
+  font-size: 35rpx;
+  position: fixed;
+  margin: 0;
+  left: 27.5%;
+  border-radius: 50rpx;
+  width: 300rpx;
+  color: #fff;
+}
+
+.third_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5b96fe;
+  margin-top: 180rpx;
+  width: 660rpx;
+}
+
+/*.third {
+  min-height: 500rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20rpx;
+  width: 680rpx;
+  padding: 10rpx;
+}*/
+
+.thirdout {
+  padding: 10rpx;
+  margin-top: 30rpx;
+  background: #85d7ff;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 10rpx #888;
+}
+
+.third {
+  min-height: 1030rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 670rpx;
+  padding: 55rpx 15rpx 25rpx;
+  border-radius: 35rpx;
+  box-shadow: 0 0rpx 25rpx #1c6fbd;
+  background: #91e5ff;
+  margin: 5rpx;
+  border: 1rpx solid #489ed1;
+}
+
+.third_content {
+  height: 150rpx;
+  width: 586rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  background: #fff;
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+  color: #006498;
+  border: 1rpx solid #6dbfd9;
+}
+
+.lookingBack {
+  width: 130rpx;
+  height: 60rpx;
+  border: 1px solid #f09800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  background: #ffba31;
+  color: #fff;
+}
+
+.addBorder {
+  border: 3rpx solid #fff;
+}

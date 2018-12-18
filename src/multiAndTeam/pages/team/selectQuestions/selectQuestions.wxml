@@ -1,0 +1,74 @@
+<!--pages/base/team/selectQuestions/selectQuestions.wxml-->
+
+<view class="container">
+<include src="../../../../common/common.wxml"/>
+  <view class="item first">
+    待分配总题数({{all.totalCount}}) 智力({{all.zlCount}}) 奔跑({{all.bpCount}}) 穿戴({{all.cdCount}})
+  </view>
+
+  <scroll-view class="item second">
+    <view class="second_second">
+      <view wx:for="{{team.memberList}}" class="second_for" wx:key="*this.name">
+        <!-- <view class='second_second_icon'>
+          <view class='icon'></view>
+        </view> -->
+        <view class='second_second_text'>{{item.nickname}}
+        </view>
+        <!-- <view class='second_second_text'>题数：{{item.total}}
+        </view> -->
+        <view class='second_second_text'>智力:{{memberKnowlegeDetailMap[item.openid].zl}}
+        </view>
+        <view class='second_second_text'>奔跑:{{memberKnowlegeDetailMap[item.openid].bp}}
+        </view>
+        <view class='second_second_text'>穿戴:{{memberKnowlegeDetailMap[item.openid].cd}}
+        </view>
+        <view class='second_second_text_assignment' bindtap='assignment' data-openid="{{item.openid}}" hidden='{{bossFlag==0}}' hover-class='addBorder'>
+          派题
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <!--点击派题显示的弹框-->
+  <view class="message_modifyTeamName" hidden='{{!assignmentFlag}}'>
+    <view wx:for="{{items}}" wx:key="*this" class="third_content"> 
+      <view class="third_content {{item.switch?'':'change'}}">
+        <switch checked='{{true}}' disabled='{{item.disabled}}' data-id="{{item.id}}" bindtap="toggle"></switch>
+        <view>{{item.title}}：</view>
+        <view class="item_number">{{item.count}}</view>
+        <view data-id="{{item.id}}" bindtap='addNumber' hover-class='addBorder' class="addAndMinus">+</view>
+        <view data-id="{{item.id}}" bindtap='minusNumber' hover-class='addBorder' class="addAndMinus">-</view>
+      </view>
+    </view>
+    <view class="modifyTeamName" bindtap='sureModify' hover-class='addBorder'>
+      <view  >确认
+      </view>
+    </view>
+  </view>
+
+<view class="message" hidden='{{!messageFlag}}'>
+    <view>
+      {{message.title}}
+    </view>
+    <view>
+      {{message.text}}
+    </view>
+    <view>
+      {{message.bottom}}
+    </view>
+  </view>
+
+
+  <view class="item third" hidden='{{bossFlag==0}}'>
+    <view class="third_first" bindtap="randomAssignment" hover-class='addBorder'>
+      随机分配
+    </view>
+
+    <view class="third_second" bindtap='finish' hover-class='addBorder'>
+      完成
+    </view>
+  </view>
+  <view class="module" hidden='{{!moduleFlag}}'>
+  </view>
+</view>

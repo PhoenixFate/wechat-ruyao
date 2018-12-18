@@ -1,0 +1,40 @@
+/* pages/base/team/countDown/countDown.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #98ccfe;
+  color: #fff;
+}
+.container{
+  background-size: 100% auto;
+}
+
+.circle-box {
+  text-align: center;
+  margin-top: 50vw;
+  z-index: 100;
+}
+
+.circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+}
+
+.draw_btn {
+  width: 35vw;
+  position: absolute;
+  top: 60vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border: none;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}

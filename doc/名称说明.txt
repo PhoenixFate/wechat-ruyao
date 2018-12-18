@@ -1,0 +1,5 @@
+individual:个人赛
+challenge:挑战赛
+multiplayer:多人赛
+team:团队赛
+arena:擂台赛

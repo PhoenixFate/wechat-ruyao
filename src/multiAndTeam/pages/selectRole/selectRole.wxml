@@ -1,0 +1,31 @@
+<view class="container whole">
+   <view wx:for="{{row}}" wx:key="*this" class="row" wx:for-item="item1" wx:for-index="index1">
+       <view wx:for="{{column}}" wx:key="*this" class="column"  >
+          <view wx:if="{{(index1*3+index+1)==5}}" bindtap='selectRole'>
+            <image src="{{rolesUrl[index1*3+(index+1)-1]}}" class="{{rolesBig[index1*3+(index+1)-1]?'big_role':'role'}}" data-num="{{index1*3+(index+1)}}"></image>
+          </view>
+          <view wx:else bindtap='detailClick'>
+            <image src="{{rolesUrl[index1*3+(index+1)-1]}}" class="{{rolesBig[index1*3+(index+1)-1]?'big_role':'role'}}" data-num="{{index1*3+(index+1)}}"></image>
+          </view>
+ 
+       </view>
+    </view>
+
+
+    <view class="message_modifyTeamName" hidden='{{!modifyTeamNameFlag}}'>
+      <view class="modifyTeamName">
+          你当前选择的角色为：
+      </view>
+      <view class="modifyTeamName">
+          <view class='photo'>
+          <image class='photo_image' src='{{rolesUrl[virtualRole-1]}}'></image>
+        </view>{{roleName}}
+      </view>
+      <view class="modifyTeamName">
+        <view class="modifyTeamName_first" bindtap='sureModify' hover-class='addBorder'>确认
+        </view>
+        <view class="modifyTeamName_second" bindtap='cancleModify' hover-class='addBorder'>取消
+        </view>
+      </view>
+  </view>
+</view>

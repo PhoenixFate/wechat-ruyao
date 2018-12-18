@@ -1,0 +1,158 @@
+/* pages/arena/nextArena/nextArena.wxss */
+
+/* pages/arena/arena.wxss */
+
+page {
+  background: #98ccfe;
+  color: #fff;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.item {
+  width: 650rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.second {
+  min-height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0;
+  /*  padding-top: 10rpx;
+  padding-bottom: 80rpx;
+  background: #5b96fe;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;*/
+}
+
+.second_text {
+  width: 638rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background: #5b96fe;
+  margin-bottom: 15rpx;
+  border: 3px solid #3186d8;
+  height: 200rpx;
+  border-radius: 15rpx;
+}
+
+.viewtext {
+  line-height: 75rpx;
+  padding: 0 30rpx;
+  text-align: center;
+}
+
+.photo {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rpx;
+}
+
+.photo_image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin: 5rpx;
+}
+
+.arena {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.circle {
+  position: absolute;
+  width: 650rpx;
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  left:6.7%;
+
+}
+
+.circle1 {
+  width: 15rpx;
+  height: 30rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  background: #98ccfe;
+}
+
+.circle2 {
+  width: 620rpx;
+  height: 1rpx;
+  border-top: 1px #98ccfe dashed;
+}
+
+.circle3 {
+  width: 15rpx;
+  height: 30rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  background: #98ccfe;
+}*/
+
+.btibg1 {
+  width: 648rpx;
+  height: 180rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: absolute;
+  text-shadow: 0 5rpx 2rpx #0163ac;
+  width: 648rpx;
+  text-align: center;
+  left: 7%;
+  font-size: 46rpx;
+  top:6.5%;
+}
+
+.title_lishisaishi{
+  position: absolute;
+  width:640rpx;
+  left: 7%;
+  height: 140rpx;
+  top:3%;
+}
+
+
+
+.first {
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  border-bottom: 3px solid #f4edff;
+  margin-bottom: 0;
+}
+

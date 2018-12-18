@@ -1,0 +1,40 @@
+<!--pages/multiplayer/multiplayer.wxml-->
+<view class="container2">
+
+ <!-- <view class="container3"></view>-->
+
+  <view class=" item first ">
+    <!-- <image src="../../images/canjia.png" class="canjia"></image> -->
+    <view class="first_text " bindtap='showView' hover-class='first_text_hover1' id='myBtn'>参加</view>
+  </view>
+
+  <view class="item second ">
+    <!-- <image src="../../images/home.png" class="home"></image> -->
+    <view class=" first_text second_text " bindtap="create" hover-class='first_text_hover2'>创建</view>
+    <view class='qipao'>
+      <image class='qipaoimg' src='../../images/qipao.png'></image>
+    </view>
+
+    <view class="second_second ">
+      <view class='viewin'>将会生成一个1-999的代号用于多人赛</view>
+    </view>
+
+  </view>
+
+</view>
+<view class="message " hidden='{{!messageFlag}}'>
+  <view>
+    {{message}}
+  </view>
+</view>
+
+<view class='modal' style='display:{{display}}'>
+  <input placeholder="请输入代号（1-999） " bindinput='bindInput' type="number " id='myModal'> </input>
+  <view class='modalbut'>
+    <view class='button1' bindtap='join'>确认</view>
+    <view class=" button2 " bindtap='hiddenView'>取消</view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,19 @@
+/* pages/flow/flow.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.tiaozhanbg {
+  width: 649rpx;
+  height: 751rpx;
+  margin-top: 200rpx;
+}
+
+.check {
+  width: 250rpx;
+  background: #fff;
+  margin-top: 30rpx;
+  line-height: 80rpx;
+}

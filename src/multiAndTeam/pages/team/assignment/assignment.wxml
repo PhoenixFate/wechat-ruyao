@@ -1,0 +1,64 @@
+<!--pages/base/house/house.wxml-->
+<view class="container">
+  <include src="../../../../common/common.wxml" />
+  <view class="item first">
+    <view class="first_text first_text1 " bindtap='mine'>
+      我方（{{tc.a.count}}人）
+    </view>
+    <view class="first_text">
+      VS
+    </view>
+    <view class="first_text first_text2" bindtap='another'>
+      对方（{{tc.b.count}}人）
+    </view>
+  </view>
+  <view class="item second">
+    <view class="second_first">
+      <view >
+        人数占比{{tc.a.percent}}%
+      </view>
+      <view>
+        {{tc.b.percent}}%
+      </view>
+
+    </view>
+
+    <view class="second_second">
+      <progress  percent='{{tc.a.percent}}' stroke-width="25" active='{{true}}' backgroundColor='#fff000'></progress>
+    </view>
+
+  </view>
+
+  <view class="item third">
+        <view class="third_content">
+              <view class='third_content1'>总题数：</view>
+              <view class='third_content2'>{{totalNumber}}</view>
+        </view>
+
+          <view wx:for="{{items}}" wx:key="*this" class="third_content"> 
+            <view class="third_content {{item.switch?'':'change'}}">
+              <switch checked='{{true}}' disabled='{{item.disabled}}' data-id="{{item.id}}" bindtap="toggle"></switch>
+              <view>{{item.title}}：</view>
+              <view class="item_number">{{item.count}}</view>
+              <view data-id="{{item.id}}" bindtap='addNumber' class="addAndMinus" hover-class='addBorder'>+</view>
+              <view data-id="{{item.id}}" bindtap='minusNumber' class="addAndMinus" hover-class='addBorder'>-</view>
+            </view>
+          </view>    
+  </view>
+
+  <view class="message" hidden='{{!messageFlag}}'>
+    <view>
+      {{message.title}}
+    </view>
+    <view>
+      {{message.text}}
+    </view>
+    <view>
+      {{message.bottom}}
+    </view>
+  </view>
+
+  <view class="item forth" hidden="{{false}}">
+    <view class="forth_text" bindtap='assignment' hover-class='addBorder'>派题</view>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/individual/question/question.wxml-->
+<view class="container" style='opacity: {{opacity}};'>
+  <view class="item first">
+    <view class="first_first">
+      <view class='huigu'>
+        <image src='../../images/huigu.png' class='huiguimg'></image>
+      </view>
+      <view class='hg'>回顾</view>
+    </view>
+    <view class="item second ">
+      <text>{{answerTextType[answer.type]}}</text>
+    </view>
+    <view bindtap='backClick' class='back' hover-class='addBorder'>
+      <view class='fh '>返回</view>
+      <view class='fanhui'>
+        <image src='../../images/back.png' class='huiguimg'></image>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="item third">
+    <view class='third_details_firstout'>
+      <image src='../../images/stepbg2.png' class='third_details_first'></image>
+      <view class="step_name">{{noteName[answer.node-1]}}</view>
+
+    </view>
+    <view class="third_details third_details_second">{{answer.title}}</view>
+    <view class='lookbutton'>
+      <view bindtap='last' class='leftbutton'>
+        <image src='{{clickUrl.left}}' class='leftimage'></image>
+      </view>
+      <view class="third_details third_details_third" hidden="{{answerFlag}}">
+        <view wx:for="{{answer.optionList}}" wx:key="*this">
+          <view data-num="{{index+1}}" class=" {{answer.bingo==(index+1) || answer.bingo==0 ?'right':'common'}}  ||  {{personalAnswer[currNode]==(index+1)? 'wrong':'common'}} ">{{abcd[index]}} {{item}} </view>
+
+        </view>
+      </view>
+      <view bindtap='next' class='rightbutton'>
+        <image src='{{clickUrl.right}}' class='rightimage'></image>
+      </view>
+    </view>
+
+
+
+    <view class="third_details third_details_forth" hidden="{{scannerFlag}}">
+      <view>{{answer.bingo}}</view>
+    </view>
+
+
+  </view>
+
+  <view class="third_message" hidden='{{!messageFlag}}'>
+    <view>
+      {{message}}
+    </view>
+  </view>
+
+
+</view>

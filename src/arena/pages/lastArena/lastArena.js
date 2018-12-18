@@ -1,0 +1,93 @@
+// pages/arena/lastArena/lastArena.js
+const app=getApp();
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    arenaList: []
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.getArenaList()
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  },
+
+  getArenaList: function () {
+    var that = this;
+    wx.request({
+      url: 'https://www.njrzzk.com/weixin/arena/getArenaList',//仅为示例，并非真实的接口地址m
+      data: {
+
+      },
+      header: {
+      },
+      success: function (res) {
+        that.setData({
+          arenaList: res.data.arenaList
+        })
+      }
+    })
+  },
+
+  detailArena: function (e) {
+    var num = e.currentTarget.dataset.num;
+    var aid = this.data.arenaList[num].id;
+    wx.navigateTo({
+      url: '../detailArena/detailArena?aid=' + aid+'&isOpening='+false,
+    })
+  },
+})

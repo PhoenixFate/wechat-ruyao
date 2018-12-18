@@ -1,0 +1,8 @@
+<!--pages/base/team/countDown/countDown.wxml-->
+<view class="container2 ">
+  <view class="circle-box">
+    <canvas class="circle" style="z-index: -99; width:200px; height:200px;" canvas-id="canvasCircle"> </canvas>
+    <canvas class="circle" style="width:200px; height:200px;" canvas-id="canvasArcCir"> </canvas>
+    <view class="draw_btn">{{downCount}}</view>
+  </view>
+</view>

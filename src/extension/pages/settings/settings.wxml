@@ -1,0 +1,48 @@
+<!--pages/settings/settings.wxml-->
+<view class="container2">
+  <view class="container3">
+    <view class="setout">
+      <view class="seticon">
+        <view class="seticonin">
+          <image src='../../images/shezhi.png' class='szimg'></image>
+        </view>
+      </view>
+      <view bindtap='close'>
+        <text class='close'>X</text>
+      </view>
+      <view class='title'>
+        <text>设置</text>
+      </view>
+
+      <view class='setbtout'>
+        <view class='setbuttonout'>
+          <image src="../../images/music.jpg" class="music"></image>
+          <text class='setbuttontext'>音效</text>
+          <switch checked="{{settings.music}}" bindchange="musicSwitchChange"></switch>
+        </view>
+        <view class='setbuttonout'>
+          <image src="../../images/post.png" class="post"></image>
+          <text class='setbuttontext'>推送</text>
+          <switch checked="{{settings.push}}" bindchange="pushSwitchChange"></switch>
+        </view>
+
+      </view>
+      <view class='fankui_out'>
+        <button open-type="feedback" class='fankui'>反馈</button>
+      </view>
+    </view>
+
+    <!--提示消息框-->
+    <view class="message" hidden='{{!messageFlag}}'>
+      <view>
+        {{message.title}}
+      </view>
+      <view>
+        {{message.text}}
+      </view>
+      <view>
+        {{message.bottom}}
+      </view>
+    </view>
+  </view>
+</view>

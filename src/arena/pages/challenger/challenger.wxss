@@ -1,0 +1,98 @@
+/* pages/arena/challenger/challenger.wxss */
+page {
+  background:#99ccff;
+  color: #fff;
+}
+
+.userinfo-avatar {
+  width: 165rpx;
+  height: 165rpx;
+  margin: 15rpx;
+  border-radius: 50%;
+}
+
+.item {
+  border: 1px solid black;
+  width: 650rpx;
+  margin: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first{
+  height: 290rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  background: -webkit-linear-gradient(top, #40a1ff, #38a3f1, #61aff9);
+  border: 0;
+  border-bottom: 4rpx solid #ffffaf;
+  margin-bottom: 0;
+
+}
+
+.second{
+  height:800rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  margin-top: 0;
+  box-shadow: 0 4rpx 4rpx #444;
+  border: 0;
+  background: #5b96fe;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.second_first{
+
+  width: 600rpx;
+  padding: 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:flex-start;
+  background: #4970f3;
+  color: #a1d4ff;
+  border-bottom: 2px solid #6fa1ff;
+}
+.second_second{
+  width: 600rpx;
+  padding: 25rpx;
+
+    background: #4e84ff;
+  color: #fff;
+  border-bottom: 2px solid #6fa1ff;
+}
+
+.second_second_content{
+
+}
+
+.third{
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.third_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content:center;
+  width: 550rpx;
+  height: 80rpx;
+  border: 1px solid black;
+  border-radius: 50rpx;
+}
+
+
+

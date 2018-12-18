@@ -1,0 +1,62 @@
+<!--pages/base/team/pie/pie.wxml-->
+
+<view class="container">
+<include src="../../../../common/common.wxml"/>
+  <view class="item first">
+              <view class="{{modelFlag.view1?'two1':'two2'}}" bindtap='showView1'>派题统计</view>
+              <view class="{{modelFlag.view2?'two1':'two2'}}" bindtap='showView2'>成员详情</view>
+  </view>
+  <view class="second" hidden='{{!modelFlag.view1}}'>
+
+    <view class="chart-iframe">
+      <canvas style="width:{{myCanvasStyle.width}}px; height: {{myCanvasStyle.height}}px;left:3%;" bindtouchstart="myCanvasTouchStart" canvas-id="myCanvas"></canvas>
+    </view>
+
+
+       <view class='question_style'>
+    <view class="second_content second_content1">
+      智力题({{params.zl}})
+    </view>
+
+    <view class="second_content second_content2">
+      奔跑题({{params.bp}})
+    </view>
+
+    <view class="second_content second_content3">
+      穿戴题({{params.cd}})
+    </view>
+  </view>
+      <view class='tishi' >
+                <view>
+                  <image class='tishiimg' src='../../../images/hand.png'></image>
+                </view>
+                <view>
+                  点击饼图可查看派题详情</view>
+      </view>
+
+  </view> 
+
+  <view class="second" hidden='{{!modelFlag.view2}}' >
+    <scroll-view class="scroll_progress" scroll-y>
+      <view class="detail_scroll_progress" wx:for="{{team.memberList}}" wx:key="*this.name">
+      <view class='photo'><image class='photo_image' src='{{item.avatar}}'></image></view>
+        <view class="progress1">{{item.nickname}}</view>
+        <view class="progress2">
+          <progress percent="{{memberKnowlegeMap[item.openid].length}}" active stroke-width="10" activeColor="rgba(34, 186,200,1)" backgroundColor="rgba(0, 0,0,0)"/>
+        </view>
+        <view class="progress3">
+            {{memberKnowlegeMap[item.openid].length}}
+        </view>
+      </view>                
+    </scroll-view>
+  </view>
+
+  <view class="item third" hidden='{{bossFlag==0}}'>
+    <view class="third_first" bindtap='random' hover-class='third_first_hover' style='{{step.step1==true?"height:120rpx;width:330rpx":""}}'>
+      随机分配
+    </view>
+    <view class="third_second" bindtap='start' hover-class='third_first_hover' style='{{step.step2==true?"height:120rpx;width:330rpx":""}}'>
+      {{actionLabel}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="container2">
+  <include src="../../../../common/common.wxml" />
+  <view class='wbgout'>
+    <view class="item first">
+      <image src='../../../images/btibg2.png' class='btibg1'></image>
+      <view class="title">选择对抗团体</view> 
+    </view>
+   <!-- <view class='wbg'></view>-->
+  </view>
+
+  <scroll-view class="item second" scroll-y="{{true}}">
+    <view wx:for="{{teamList}}" wx:key="{{index}}" wx:for-index="index">
+      <view data-num="{{index+1}}" data-code="{{item.teamid}}" data-num="{{index}}" class="second_text {{_num==index?'selecton':'second_text'}}" bindtap='selectTeam'>{{item.teamTitle}}</view>
+    </view>
+
+  </scroll-view>
+
+
+  <view class="item third">
+    <view class="third_text" bindtap='challenge' hover-class='addBorder'>挑战</view>
+  </view>
+</view>

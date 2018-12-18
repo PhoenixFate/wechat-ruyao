@@ -1,0 +1,100 @@
+<!--pages/base/bothSides/bothSides.wxml-->
+<view class="container2">
+  <include src="../../../../common/common.wxml" />
+  <view class="item first">
+    <view class='first_out'>
+      <view class='first_in'bindtap='mine'>
+        <view class='photo1'>
+          <image class='photo_image' src='{{teamA.avatar}}'></image>
+        </view>
+        <view class="first_text first_textleft" >
+          我方（{{teamA.count}}人）
+        </view>
+      </view>
+      <view class="vs">
+        VS
+      </view>
+
+      <view class='first_in'bindtap='another'>
+        <view class="first_text first_textright" >
+          对方（{{teamB.count}}人）
+        </view>
+
+        <view class='photo2'>
+           <image class='photo_image' src='{{teamB.avatar}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="item second" hidden='{{!toggle}}'>
+    <view class="second_first">
+      <view>
+        队名：{{teamA.teamName}}
+      </view>
+
+    </view>
+    <view class="second_second">
+      组织者：{{teamA.organiser}}
+    </view>
+  </view>
+
+  <view class="item second" hidden='{{toggle}}'>
+    <view class="second_first">
+      <view>
+        队名：{{teamB.teamName}}
+      </view>
+
+    </view>
+    <view class="second_second">
+      组织者：{{teamB.organiser}}
+    </view>
+  </view>
+
+  <scroll-view class="item third" hidden='{{!toggle}}'>
+    <view wx:for="{{teamA.memberList}}" wx:key="*this" class="third_content">
+      <view class='photo'>
+          <image class='photo_image3' src='{{item.avatar}}'></image>
+      </view>
+      <view class="third_content_first">{{item.nickname}}</view>
+      <view class="photo">
+          <image src="{{rolesUrl[item.role-1]}}" class='photo_image'>
+          </image>
+        </view>
+      <view class="third_content_second">
+        {{roles[item.role]}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <scroll-view class="item third" hidden='{{toggle}}'>
+    <view wx:for="{{teamB.memberList}}" wx:key="*this" class="third_content">
+      <view class='photo'><image class='photo_image3' src='{{item.avatar}}'></image></view>
+      <view class="third_content_first">{{item.nickname}}
+      </view>
+      <view class="photo">
+          <image src="{{rolesUrl[item.role-1]}}" class='photo_image'>
+          </image>
+        </view>
+      <view class="third_content_second">
+        {{roles[item.role]}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="message" hidden='{{!messageFlag}}'>
+    <view>
+      {{message.title}}
+    </view>
+    <view>
+      {{message.text}}
+    </view>
+    <view>
+      {{message.bottom}}
+    </view>
+  </view>
+
+  <view class="item forth" hidden="{{isB}}">
+    <view class="forth_text" bindtap='assignment' hover-class='addBorder'>派题</view>
+  </view>
+</view>

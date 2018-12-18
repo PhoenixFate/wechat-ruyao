@@ -1,0 +1,58 @@
+<!--pages/arena/arena.wxml-->
+<view class="container">
+  <view class="item">
+    <view class='show'>
+      <view class="list" wx:for="{{userList.yearWinner}}" wx:key="*this.openid">
+        <view class='list1' bindtap='bindViewTap' data-userType="1" data-num="{{index}}">
+          <view class='photo'>
+            <image class='photo_image' src='{{item.avatar}}'></image>
+          </view>
+          <view class='user_name'>
+            {{item.nickname}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Titletext Titletext1">
+      年度擂主
+    </view>
+  </view>
+
+  <view class="item">
+    <view class='show'>
+      <view class="list" wx:for="{{userList.monthWinner}}" wx:key="*this.openid">
+        <view class='list1' bindtap='bindViewTap' data-userType="2" data-num="{{index}}">
+          <view class='photo'>
+            <image class='photo_image' src='{{item.avatar}}'></image>
+          </view>
+          <view class='user_name'>
+            {{item.nickname}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Titletext Titletext2">
+      月度擂主
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="show">
+      <view class="list" wx:for="{{userList.programWinner}}" wx:key="*this.openid">
+        <view bindtap='bindViewTap' data-userType="2" data-num="{{index}}" class='list1'>
+          <view class='photo'>
+            <image class='photo_image' src='{{item.avatar}}'></image>
+          </view>
+          <view class='user_name'>
+            {{item.nickname}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="Titletext Titletext3">
+      节日擂主
+    </view>
+  </view>
+
+</view>

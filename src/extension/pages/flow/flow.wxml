@@ -1,0 +1,12 @@
+<!--pages/flow/flow.wxml-->
+<view class="container2">
+  <view>
+  <image src='../../images/tiaozhanbg.png' class='tiaozhanbg'></image>
+  </view>
+
+
+
+<button open-type="share" bindtap='selectFriend' class="check">选择好友</button>
+
+
+</view>

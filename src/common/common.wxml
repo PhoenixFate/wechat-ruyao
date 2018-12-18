@@ -1,0 +1,45 @@
+<view class='group_inout' animation="{{anima}}" hidden='{{(hide==null || hide=="undefined")?true:hide}}'>
+  {{msg}}
+</view>
+
+<button class='projectile_buttom' bindtap='showChat' hover-class='projectile_buttom_hover'>…</button>
+
+<!--聊天框-->
+<view class='talk-container' hidden='{{(chatFlag==null || chatFlag=="undefined")?true:chatFlag}}'>
+  <view class='talk_title'>多人赛聊天记录</view>
+  <view class='send_out'>
+    <input class='send' bindinput='bindInputMsg' value='{{inputValue}}'></input>
+
+    <view class='sendin'>
+      <view class='send_bg'>
+        <button class='send_button' hover-class='send_button_hover' bindtap='bindSendMessage'>发送</button>
+      </view>
+      <view class='cancle_bg send_bg '>
+        <button class='cancle' hover-class='send_button_hover' bindtap='bindSendMessage'>取消</button>
+      </view>
+    </view>
+    <view class='iconcontainer'>
+      <image bindtap='bindChargeNumber' class='chfhout' src="/images/chfh.png">
+      </image>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='message-container' hidden='{{(confirmDialogFlag==null || confirmDialogFlag=="undefined")?true:confirmDialogFlag}}'>
+  <view class=' special'>
+    <view class='message1'>
+      <text>{{confirmMsg}}</text>
+      <text>是否应战？</text>
+    </view>
+    <view class='button_out '>
+      <view class=' accept'>
+        <button class='accept_button' bindtap='bindAcceptChallenge'>接受</button>
+      </view>
+      <view class='send_bg'>
+        <button class='send_button' bindtap='bindRefuseChallenge'>拒绝</button>
+      </view>
+    </view>
+  </view>
+</view>

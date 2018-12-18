@@ -1,0 +1,49 @@
+<!--pages/award/award.wxml-->
+<view class="container">
+  <view class='top'></view>
+  <view class='navbar'>
+    <view wx:for="{{match}}" wx:key="*this" data-num="{{index}}" class="text  {{_num==index?'text'+(index+1):''}}" bindtap='changeTap'>{{match[index]}}</view>
+  </view>
+
+  <scroll-view class='awardout' scroll-y="{{true}}"   bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-with-animation="{{true}}" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view wx:for="{{match}}" wx:key="*this" wx:for-item="m" wx:for-index="mi"  id="{{order[mi]}}" >
+    <view class='out' id="first">
+      <view class='saititle'>
+        <view class='jpicon'>
+          <image class='jpimg' src='../../images/award{{mi+1}}.png'></image>
+        </view>
+        <view class='circle'>
+          <view class='circle1'></view>
+          <view class='circle2'></view>
+          <view class='circle3'></view>
+        </view>
+        <view class='sname'>{{match[mi]}}奖品</view>
+      </view>
+      
+      <view class="awardWrap">
+      <view wx:for="{{award}}" wx:key="*this.name" wx:for-item="award" >
+           <view wx:if="{{award.matchType==mi}}">
+              <view class='jpout'>
+                    <view wx:for="{{award.picture}}" wx:key="*this">
+                            <view class='jp1'>
+                              <view class="image ">
+                                <image src="{{item}}"></image>
+                              </view>
+                              <view class='titlecolor'>{{award.name}}</view>
+                              <view>{{award.content}}</view>
+                              <view>获奖要求：{{award.ruleIntro}}</view>
+                            </view>
+                      </view>
+              </view>
+            </view>
+            
+        </view>
+        </view>
+        <view wx:if="{{mi==4}}">
+          擂台赛奖品，请查看对应擂台赛事
+        </view>
+    </view>
+
+    </view>
+  </scroll-view> 
+</view>

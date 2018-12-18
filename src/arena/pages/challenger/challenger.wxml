@@ -1,0 +1,30 @@
+<!--pages/arena/challenger/challenger.wxml-->
+<view class="container">
+      <view class="item first">
+          <view class="first_picture">
+              <image  class="userinfo-avatar" src="{{user.user.avatar}}" background-size="cover"></image>
+          </view>
+          <view class="first_text">
+                {{user.user.nickname}}
+          </view>
+
+          
+      </view>
+
+      <view class="item second">
+            <view class="second_first">
+                  最好成绩:
+            </view>
+            <view class="second_second">
+                  <view class="second_second_content">
+                         {{user.createDate}}     用时{{user.score}}
+                  </view>
+            </view>
+      </view>
+
+      <!-- <view class="item third">
+            <view class="third_text" bindtap='start'>发起挑战</view>
+      </view> -->
+
+
+</view> 

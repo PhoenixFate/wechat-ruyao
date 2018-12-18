@@ -1,0 +1,102 @@
+/* pages/introduction/introduction.wxss */
+
+page {
+  background: #98ccfe;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.item {
+  width: 600rpx;
+  margin: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 55rpx;
+}
+
+.first {
+  min-height: 300rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  border: 8rpx solid #6cf;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 4rpx;
+  margin-top: 35rpx;
+  position: relative;
+}
+
+.second {
+  min-height: 300rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  border: 8rpx solid #6cf;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 4rpx;
+  position: relative;
+}
+
+.modal-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-content {
+  /* width: 60%; */
+  margin: 0 10% 0 30%;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.modal-content {
+  width: 60%;
+  height: 150px;
+}
+
+.modal-content .fenxiang {
+  width: 100%;
+  height: 40%;
+}
+
+.text_bg {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #fff;
+  border: 10rpx solid #6cf;
+  box-shadow: 0 2rpx 3rpx #666;
+}
+
+.linian, .guize {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -20rpx;
+  left: 27%;
+}
+
+.limig {
+  width: 305rpx;
+  height: 82rpx;
+}
+
+text {
+  display: flex;
+  line-height: 50rpx;
+  text-align: left;
+  padding-left: 12rpx;
+}

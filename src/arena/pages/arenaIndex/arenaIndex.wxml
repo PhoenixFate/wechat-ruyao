@@ -1,0 +1,62 @@
+<!--pages/arena/index/index.wxml-->
+<view class="container">
+  <view>
+    <view class="item first">
+      <image src='../../images/btibg1.png' class='btibg1'></image>
+      <image src='../../images/leitaisai.png' class='title_leitaisai'></image>
+      <!-- <view class="title">擂台赛</view> -->
+    </view>
+
+    <view class="item second">
+
+      <scroll-view scroll-y="{{true}}" class='saishi'>
+        <view class='secondwill'>
+          <view class='will'>
+
+            <view data-num="{{index}}" bindtap='detailNextArena' class="second_text" wx:for="{{nextArena}}" wx:key="*this.id">
+              {{item.title}}
+            </view>
+
+            <view class='jxbg'>
+              <image src='../../images/jxbg.png' class='jximg'></image>
+              <view class='jxzht'>马上开始 </view>
+            </view>
+          </view>
+        </view>
+
+
+        <view class='secondnow'>
+          <view wx:for="{{openingArena}}" wx:key="*this.id" class='will'>
+            <view class="second_text">
+              <view data-num="{{index}}" bindtap='detailOpeningArena'>
+                {{item.title}}
+              </view>
+            </view>
+            <view class='jxbg'>
+              <image src='../../images/zhjxbg.png' class='jximg'></image>
+              <view class='jxzht'>正在进行 </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <view class='circle'>
+        <view class='circle1'></view>
+        <view class='circle2'></view>
+        <view class='circle3'></view>
+      </view>
+      <view class='jlout'>
+
+        <view class="item third" bindtap='lastArena' hover-class='third_hover'>
+          历史赛事
+        </view>
+        <view class="item forth" bindtap='rank' hover-class='forth_hover'>
+          擂主风云榜
+        </view>
+
+      </view>
+    </view>
+
+
+  </view>
+</view>

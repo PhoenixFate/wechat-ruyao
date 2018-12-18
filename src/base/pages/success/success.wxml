@@ -1,0 +1,169 @@
+<!--pages/success/success.wxml-->
+<view class="container">
+  <view class='container3'></view>
+  <view class="item back" bindtap='backToIndex'>
+    首页
+  </view>
+  <scroll-view scroll-y="{{true}}" class="item first" hidden="{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}">
+    <!--个人赛，挑战赛，擂台赛公用部分-->
+    <view class="first_first">
+      <view class=" end">
+        {{message.first}}
+      </view>
+      <view class="first_first_text first_first_text2">
+        {{message.second}}
+      </view>
+      <view class="first_first_text first_first_text3">
+        {{message.third}}
+      </view>
+      <view class="over">
+        {{message.forth}}
+      </view>
+      <!-- <view><image src='../../images/index/end_icon.png' class='end_icon'></image></view> -->
+    </view>
+    <view class="first_second" hidden="{{currentAwardFlag}}">
+      <view class="first_second_text">
+        <view>
+          {{currentAward.name}}
+        </view>
+        <view>
+          {{currentAward.content}}
+        </view>
+        <view wx:for="{{currentAward.picture}}" wx:key="*this" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+          <image src='{{item}}' class='first_secondimg'>
+          </image>
+        </view>
+        <!--空白view用于撑大一点-->
+        <view class="blank">
+        </view>
+      </view>
+    </view>
+    <!--个人赛，挑战赛，擂台赛公用部分end-->
+  </scroll-view>
+
+
+  <!--多人赛--start-->
+  <view hidden="{{matchFlag!=2}}" class="multi_result">
+    <view class="special_first_second">
+      <view class="first_second_text">
+        <!-- <view>
+          冠军
+        </view> -->
+
+        <view>
+          {{matchResult.ourside.detail[0].nickname}}
+        </view>
+        <view class='pg'>
+          <image src='../../images/guanjun.png' class='guanjun'></image>
+          <view class='photo'>
+            <image class='photo_image' src='{{matchResult.ourside.detail[0].avatar}}'></image>
+          </view>
+        </view>
+        <view wx:for="{{matchResult.ourside.detail[0].award.picture}}" wx:key="*this" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+          <image src='{{item}}' class='multiImg'>
+          </image>
+        </view>
+      </view>
+    </view>
+    <view class="special2_first_second" hidden="{{multiAwardFlag[0]}}">
+      <view class="first_second_text">
+        <!-- <view>
+          亚军
+        </view> -->
+        <view>
+         {{matchResult.ourside.detail[1].nickname}}
+        </view>
+        <view class='pg'>
+          <image src='../../images/yajun.png' class='guanjun'></image>
+          <view class='photo'>
+            <image class='photo_image' src='{{matchResult.ourside.detail[1].avatar}}'></image>
+          </view>
+        </view>
+        <view wx:for="{{matchResult.ourside.detail[1].award.picture}}" wx:key="*this" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+          <image src='{{item}}' class='multiImg'>
+          </image>
+        </view>
+      </view>
+    </view>
+    <view class="special3_first_second" hidden="{{multiAwardFlag[1]}}">
+      <view class="first_second_text">
+        <!-- <view>
+          季军
+        </view> -->
+        <view>
+          {{matchResult.ourside.detail[2].nickname}}
+        </view>
+        <view class='pg'>
+          <image src='../../images/jijun.png' class='guanjun'></image>
+          <view class='photo'>
+            <image class='photo_image' src='{{matchResult.ourside.detail[2].avatar}}'></image>
+          </view>
+        </view>
+        <view wx:for="{{matchResult.ourside.detail[2].award.picture}}" wx:key="*this" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+          <image src='{{item}}' class='multiImg'>
+          </image>
+        </view>
+      </view>
+    </view>
+
+    <view class='nowstep'>
+      您当前排名第{{multiRank}}名
+    </view>
+  </view>
+  <!--多人赛--end-->
+
+  <!--团队赛start-->
+  <view class="progress" hidden="{{matchFlag!=3}}">
+    <!--我方完成情况-->
+    <view class="progress_first">
+      <view class="progress_first_first progress_first_first1">我方完成情况</view>
+      <view class="progress_first_second progress_first_second1 ">
+        <view class="progress_details">
+          用时: {{matchResult.ourside.useTime}}
+        </view>
+        <view class="progress_details">
+          准确率: {{oursideRightPercent}}%
+        </view>
+        <view class="progress_details border_bottom">
+          罚时:{{matchResult.ourside.punishTime}}
+        </view>
+      </view>
+    </view>
+    <!--对方完成情况-->
+    <view class="progress_first">
+      <view class="progress_first_first progress_first_first2">对方完成情况</view>
+      <view class="progress_first_second progress_first_second2">
+        <view class="progress_details">
+          用时: {{matchResult.opposite.useTime}}
+        </view>
+        <view class="progress_details">
+          准确率: {{oppositeRightPercent}}%
+        </view>
+        <view class="progress_details border_bottom">
+          罚时:{{matchResult.opposite.punishTime}}
+        </view>
+      </view>
+    </view>
+
+    <view class="winner">
+      <view hidden="{{!matchResult.ourside.winner}}" class="winnerText_left" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+        winner
+      </view>
+      <view hidden="{{!matchResult.opposite.winner}}" class="winnerText_right" data-num="{{matchFlag}}" catchtap='showMultiAward'>
+        winner
+      </view>
+    </view>
+  </view>
+  <!--团队赛end-->
+
+  <view class="item second second_special">
+    <view class="second_text second_text1" bindtap='lookingBack' hover-class='addBorder'>
+      挑战回顾
+    </view>
+    <button data-name="shareBtn" open-type="share" hover-class='addBorder' class="second_text shareBtn">荣誉分享</button>
+    <view class="second_text second_text3" bindtap='rankList' hover-class='addBorder'>
+      查看排名
+    </view>
+  </view>
+
+</view>

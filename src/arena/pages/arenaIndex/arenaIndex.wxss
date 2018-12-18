@@ -1,0 +1,225 @@
+/* pages/arena/arena.wxss */
+
+page {
+  background: #98ccfe;
+  color: #fff;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.item {
+  width: 650rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.will {
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.jxbg {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rpx;
+  width: 160rpx;
+  height: 160rpx;
+  right: 3rpx;
+  top: 0;
+}
+
+.jximg {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.jxzht {
+  position: absolute;
+  font-size: 32rpx;
+  transform: rotate(45deg);
+  top: 45rpx;
+  left: 40rpx;
+  width: 150rpx;
+}
+
+.second {
+  height: 900rpx;
+  background: #5b96fe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0;
+  padding-top: 30rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.secondwill {
+  display: flex;
+  width: 568rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.secondnow {
+  display: flex;
+  width: 568rpx;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.second_text {
+  width: 560rpx;
+  height: 160rpx;
+  border: 3px solid #7fbfff;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #5987f6;
+}
+
+.jlout {
+  display: flex;
+  width: 568rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50rpx;
+  position: fixed;
+  top: 78.5%;
+  left: 45rpx;
+}
+
+.circle {
+  position: relative;
+  width: 650rpx;
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle1 {
+  width: 15rpx;
+  height: 30rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  background: #98ccfe;
+}
+
+.circle2 {
+  width: 620rpx;
+  height: 1rpx;
+  border-top: 1px #98ccfe dashed;
+}
+
+.circle3 {
+  width: 15rpx;
+  height: 30rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  background: #98ccfe;
+}
+
+.third {
+  width: 220rpx;
+  height: 70rpx;
+  border: 2px solid #7fbfff;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #5987f6;
+  margin: 0;
+}
+
+.third_hover {
+  border: 2px solid #fff;
+}
+
+.forth {
+  width: 220rpx;
+  height: 70rpx;
+  border: 2px solid #7fbfff;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #5987f6;
+  margin: 0;
+}
+
+.forth_hover {
+  border: 2px solid #fff;
+}
+
+.saishi {
+  height: 700rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 12%;
+}
+
+.btibg1 {
+  width: 648rpx;
+  height: 180rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: absolute;
+  /* text-shadow: 0 5rpx 2rpx #0163ac;
+  width: 648rpx;
+  text-align: center;
+  left: 7%;
+  font-size: 46rpx;
+  top:6.5%; */
+  width:400rpx;
+  left: 25%;
+  height: 100rpx;
+}
+
+.title_leitaisai{
+  position: absolute;
+  width:400rpx;
+  left: 24%;
+  height: 140rpx;
+  top:3%
+}
+
+
+.first {
+  height: 180rpx;
+  border: 1px solid #2f81ec;
+  border-bottom: 3px solid #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  width: 648rpx;
+}
+

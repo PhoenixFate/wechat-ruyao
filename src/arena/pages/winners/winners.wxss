@@ -1,0 +1,150 @@
+/* pages/arena/arena.wxss */
+
+page {
+  background: #98ccfe;
+  color: #fff;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.userinfo-avatar {
+  width: 165rpx;
+  height: 165rpx;
+  margin: 15rpx;
+  border-radius: 50%;
+}
+
+.item {
+  width: 650rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rpx 1rpx #444;
+  background: #fff;
+  border-radius: 20rpx;
+  color: #222;
+}
+
+.top {
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first {
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titleText {
+  font-size: 60rpx;
+  margin-top: 80rpx;
+}
+
+.second {
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.third {
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.list {
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 30rpx;
+}
+
+.Titletext {
+  width: 650rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 100rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  text-shadow: 0 2rpx 2rpx #444;
+}
+
+.Titletext1 {
+  background: #f5b23d;
+}
+
+.Titletext2 {
+  background: #7ace2e;
+}
+
+.Titletext3 {
+  background: #52b3f7;
+}
+
+.list1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15rpx;
+}
+
+.photo_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 130rpx;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #f3f683;
+  border-radius: 15rpx;
+  box-shadow: 0 3rpx 3rpx #444;
+  width: 102rpx;
+  height: 102rpx;
+  justify-content: space-around;
+  margin-bottom: 15rpx;
+}
+
+.user_name {
+  font-size: 32rpx;
+}
+
+.photo_image {
+  width: 96rpx;
+  height: 96rpx;
+  border: 2px solid #f3f683;
+  border-radius: 15rpx;
+  background: #bb92e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}

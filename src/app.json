@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "base",
+      "pages": [
+        "pages/lookingBack/lookingBack",
+        "pages/question/question",
+        "pages/success/success",
+        "pages/selectRole/selectRole",
+        "pages/round/round"
+      ]
+    },
+    {
+      "root": "arena",
+      "pages": [
+        "pages/detailArena/detailArena",
+        "pages/arenaIndex/arenaIndex",
+        "pages/lastArena/lastArena",
+        "pages/winners/winners",
+        "pages/challenger/challenger"
+      ]
+    },
+    {
+      "root": "extension",
+      "pages": [
+        "pages/flow/flow",
+        "pages/history/history",
+        "pages/rankingList/rankingList",
+        "pages/award/award",
+        "pages/settings/settings",
+        "pages/introduction/introduction",
+        "pages/web/web"
+      ]
+    },
+    {
+      "root": "multiAndTeam",
+      "pages": [
+        "pages/entry/entry",
+        "pages/team/pie/pie",
+        "pages/team/bothSides/bothSides",
+        "pages/house/house",
+        "pages/team/countDown/countDown",
+        "pages/team/assignment/assignment",
+        "pages/team/selectQuestions/selectQuestions",
+        "pages/team/selectTeam/selectTeam",
+        "pages/selectRole/selectRole"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4b7eff",
+    "navigationBarTitleText": "乳瑶人防宝",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#4b7eff"
+  }
+}

@@ -1,0 +1,20 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+
+  <view class="item second">
+    <view class="second_content">
+      <view>共{{count}}次记录</view>
+    </view>
+  </view>
+
+  <view class=" thirdout">
+    <scroll-view class="item third" scroll-y>
+      <view class="third_content" wx:for="{{historyList}}" wx:key="">
+        <view>{{item.createDate}}</view>
+        <view>{{item.matchType}}</view>
+        <view>用时{{item.time}} </view>
+        <view class="lookingBack" data-num="{{index}}" bindtap='lookingback' hover-class='addBorder'> 回顾</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

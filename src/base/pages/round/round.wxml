@@ -1,0 +1,22 @@
+<view class="container" >
+  <view class='stepbg'>
+  <image src='../../images/guankou_bg.jpg' class='stepbg_image1'></image>
+    <view>
+      <view class='text text1 text_start_over '>五彩瑶山</view>
+      <view data-num="1" class='step step1 start_over'>1</view>
+    </view>
+
+     <view wx:for="{{flagArray}}" wx:key="*this">
+          <view class='text text{{index+2}} texta  {{flagArray[index]==true?"":"close"}}'>{{noteName[index+1]}}</view>
+      <view data-num="{{index}}" class='step step{{index+2}} stepa' bindtap='whetherShow'>{{index+2}}</view>
+    </view> 
+
+  </view>
+
+  <!--多人赛隐藏开始挑战按钮-->
+  <view class=" second" hidden="{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}">
+
+      <button type="" bindtap='startChallenge' class='third_button'>开始挑战</button>  
+
+  </view>
+</view>

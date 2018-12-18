@@ -1,0 +1,133 @@
+<!--pages/base/house/house.wxml-->
+<view class="container2">
+  <include src="../../../common/common.wxml" />
+  <view class="item first">
+    <view class="first_text">
+      <image src='../../../images/house.png' class='people'></image>
+      多人赛代号：{{code}}
+    </view>
+    <view>/</view>
+    <view class="first_text">
+      <image src='../../../images/people.png' class='people'></image>
+      人数： {{count}}人
+    </view>
+  </view>
+  <view class="item second">
+    <view class="second_first">
+      <view class='team_name'>
+        队名：{{teamName}}
+      </view>
+      <view bindtap='modifyTeamName' class='team_change' hover-class='addBorder'>
+        <image src='../../../images/xiugai.png' class='people'></image>
+      </view>
+
+    </view>
+    <view class="second_second">
+      <view class='team_name'>
+        组织者：{{organiser}}</view>
+    </view>
+
+  </view>
+
+  <scroll-view class="third_scroll" scroll-y="{{true}}">
+    <view class="scroll_item">
+      <view class="third_content" bindtouchstart="myTouchS" bindtouchmove="myTouchM" bindtouchend="myTouchE" style="{{myTxtStyle}}">
+        <view class='photo'>
+          <image class='photo_image' src='{{userInfo.avatar}}'></image>
+        </view>
+        <view class="third_content_first">{{userInfo.nickname}}</view>
+        <view class="photo">
+          <image src="{{rolesUrl[userInfo.role-1]}}" class='photo_image'>
+          </image>
+        </view>
+        <view class="third_content_second">
+          {{roles[userInfo.role]}}
+        </view>
+      </view>
+      <view class="my_third_modify" data-openid="{{userInfo.openid}}" bindtap='selectRole' hover-class='addBorder'>
+        修改
+      </view>
+    </view>
+
+
+
+    <view wx:for="{{memberList}}" wx:key="*this" class="scroll_item">
+      <view class="third_content" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}">
+        <view class='photo'>
+          <image class='photo_image' src='{{item.avatar}}'></image>
+        </view>
+        <view class="third_content_first">{{item.nickname}}</view>
+        <view class="photo">
+          <image src="{{rolesUrl[item.role-1]}}" class='photo_image'>
+          </image>
+        </view>
+
+        <view class="third_content_second">
+          {{roles[item.role]}}
+        </view>
+      </view>
+      <view data-openid="{{item.openid}}" class="third_modify" bindtap='selectRole' hidden='{{!bossFlag}}' hover-class='addBorder'>
+        修改
+      </view>
+      <view class="third_delete" data-openid="{{item.openid}}" bindtap="kick" hidden='{{!bossFlag}}' hover-class='addBorder'>
+        踢除
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="message" hidden='{{!messageFlag}}'>
+    <view>
+      {{message.title}}
+    </view>
+    <view>
+      {{message.text}}
+    </view>
+    <view>
+      {{message.bottom}}
+    </view>
+  </view>
+
+  <view class="message_modifyTeamName" hidden='{{!modifyTeamNameFlag}}'>
+    <view class="modifyTeamName_input">
+      <input placeholder="请输入需要修改的队名" bindinput='bindInput'></input>
+    </view>
+    <view class="modifyTeamName">
+      <view class="modifyTeamName_first" bindtap='sureModify' hover-class='addBorder'>确认
+      </view>
+      <view class="modifyTeamName_second" bindtap='cancleModify' hover-class='addBorder'>取消
+      </view>
+    </view>
+  </view>
+
+  <view class="message_sure" hidden='{{!messageSureFlag}}'>
+    <view class="message_sure_item">
+      是否确定要解散房间?
+    </view>
+    <view class="message_sure_item">
+      <view class="message_sure_ok" bindtap='suredismiss' hover-class='addBorder'>确认
+      </view>
+      <view class="message_sure_cancel" bindtap='canceldismiss' hover-class='addBorder'>取消
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <view class="tip" hidden="{{tip!=1}}" style='{{tipRight}}'>
+    <view class='close' bindtap='closeTip'>X</view>
+    <text>滑动来修改角色</text>
+    <view class='tag'></view>
+    <view class='tag2'></view>
+  </view>
+
+  <view class="item forth" hidden="{{bossFlag}}">
+    <view class="forth_text" bindtap='quit' hover-class='addBorder'>退出赛事</view>
+  </view>
+
+  <view class="item fifth" hidden="{{!bossFlag}}">
+    <view class="forth_text" bindtap='dismiss' hover-class='addBorder'>解散</view>
+    <view class="forth_text forth_text2" bindtap='start' hover-class='addBorder'>开始</view>
+    <view class="forth_text forth_text3" bindtap='selectTeam' hover-class='addBorder'>对战</view>
+  </view>
+</view>

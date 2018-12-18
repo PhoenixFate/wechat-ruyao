@@ -1,0 +1,133 @@
+<view class="container1">
+  <view class='top'></view>
+
+  <!--个人赛 挑战赛 擂台赛  多人赛 -->
+  <view class="item second" hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=2 && matchFlag!=4}}' scroll-y="{{true}}">
+
+    <view class="second_content" wx:for="{{userList}}" wx:key="*this.id">
+      <view class="userIndex">
+        <view wx:if="{{index==0}}">
+          <image src='../../images/first.png' class='jinjiang'></image>
+        </view>
+        <view wx:elif="{{index==1}}">
+          <image src='../../images/second.png' class='jinjiang'></image>
+        </view>
+        <view wx:elif="{{index==2}}">
+          <image src='../../images/third.png' class='jinjiang'></image>
+        </view>
+        <view wx:elif="{{index<9}}" class='tiepai'>
+          <image src='../../images/tiepai.png' class='jinjiang'></image>
+          <view class='mingci'>{{index+1}}</view>
+        </view>
+        <view wx:else class='tiepai'>
+          <image src='../../images/tiepai.png' class='jinjiang'></image>
+          <view class='mingci2'>{{index+1}}</view>
+        </view>
+        <!-- {{index+1}} -->
+      </view>
+      <view class='username_out'>
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{item.avatar}}" background-size="cover">
+          </image>
+        </view>
+      </view>
+
+      <view class='comecity'>
+        <view class="my_nickname" hover-class='my_nickname_hover'>
+          {{item.nickname}}
+        </view>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          来自{{item.city?item.city:"火星"}}
+        </view>
+      </view>
+      <view class='step'>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          {{item.bestScore}}
+        </view>
+        <view hidden='{{matchFlag!=2 && matchFlag!=3 }}'>
+          {{item.useTime}}
+        </view>
+
+      </view>
+    </view>
+
+
+  </view>
+
+  <!--团队赛 -->
+  <view class="item second" hidden='{{matchFlag!=3}}'>
+    <view class="two">
+      <view class="{{modelFlag.view1?'two1':'two2'}}" bindtap='showView1'>我方</view>
+      <view class="{{modelFlag.view2?'two1':'two2'}}" bindtap='showView2'>对方</view>
+    </view>
+    <view class="second_content" wx:for="{{userList}}" wx:key="*this.id" hidden='{{!modelFlag.view1}}'>
+      <view class='username_out'>
+        <view class="userinfo">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.avatar}}" background-size="cover">
+          </image>
+
+        </view>
+      </view>
+      <view class='comecity'>
+        <view>
+          {{item.nickname}}
+        </view>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          来自{{item.city}}
+        </view>
+
+      </view>
+      <view class='step'>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          {{item.bestScore}}
+        </view>
+        <view hidden='{{matchFlag!=2 && matchFlag!=3 }}'>
+          {{item.useTime}}
+        </view>
+      </view>
+    </view>
+
+    <view class="second_content" wx:for="{{oppositeUserList}}" wx:key="*this.id" hidden='{{!modelFlag.view2}}'>
+      <view class='username_out'>
+        <view class="userinfo">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.avatar}}" background-size="cover">
+          </image>
+        </view>
+      </view>
+      <view class='comecity'>
+        <view>
+          {{item.nickname}}
+        </view>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          来自{{item.city}}
+        </view>
+      </view>
+      <view class='step'>
+        <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+          {{item.bestScore}}
+        </view>
+        <view hidden='{{matchFlag!=2 && matchFlag!=3 }}'>
+          {{item.useTime}}
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+
+
+
+  <view class=" bottom">
+    <view hidden='{{matchFlag!=0 && matchFlag!=1 && matchFlag!=4}}'>
+      前100名
+    </view>
+    <view hidden='{{matchFlag!=2 && matchFlag!=3 }}'>
+      共{{count}}人
+    </view>
+    <view>
+      您在第{{rank}}名
+    </view>
+  </view>
+</view>

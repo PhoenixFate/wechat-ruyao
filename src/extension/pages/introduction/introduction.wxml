@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="item first">
+    <view class='linian'>
+      <image src='../../images/linian.png' class='limig'></image>
+    </view>
+    <text decode="{{true}}">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在宣教园人防要素一条主线建设的基础上，以全要素游戏体验功能设计为灵魂，引领参与者按照消除空袭防护行动过程，进行有序互动体验，达到教育内容系统化、教育过程趣味化、教育效果深刻化的目标。
+    </text>
+  </view>
+  <view class="item second">
+    <view class='guize'>
+      <image src='../../images/guize.png' class='limig'></image>
+    </view>
+    <text decode="{{true}}">
+     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;缩微沙盘中的人防工程、疏散地域、百米人防长廊展板、重要经济目标防护展区、人防体验区等所有人防教育元素中均设置二维码。
+     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;参与者通过角色分配任务，携带手机到达指定位置扫描二维码，学习相关内容，回答相关问题，完成指定任务，根据回答问题的准确率及完成时间，决定成绩，优胜者获得相应的奖励。
+     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;系统根据赛事历史生成各种排名，在公众号上公布，参与者可将结果、排名、奖励进行朋友圈分享与互动。赛事主要分为个人赛、挑战赛、多人赛、团队赛和擂台赛五种。
+    </text>
+
+  </view>
+
+</view>

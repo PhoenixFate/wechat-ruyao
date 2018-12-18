@@ -1,0 +1,208 @@
+<!--pages/individual/question/question.wxml-->
+<view hidden='{{matchFlag==0 || matchFlag==1 || matchFlag==4}}'>
+  <include src="../../../common/common.wxml" />
+</view>
+<view class="container" bindtap='cancel'>
+
+  <view class='top'>
+    <image class='topimg' src='../../images/top_bg.png'></image>
+    <view class='third_details_firstout'>
+      <view class="step_name ">{{answerTextType[answer.type]}}</view>
+    </view>
+  </view>
+
+
+  <view class="item first">
+    <view class="first_first">
+      <view class='timeicon'>
+        <image class='first_second_image' src='../../images/clock.png'></image>
+      </view>
+      <view class='time'>
+        {{time.hours}}:{{time.minutes}}:{{time.seconds}}</view>
+    </view>
+    <!-- <view class="item second"> -->
+    <view class="item second">
+      <!--选项/奔跑/穿戴-->
+      <text animation="{{nodeAnima}}" style='' class=''>{{noteName[answer.node-1]}}</text>
+      <!-- <text  style='' class=''>{{noteName[answer.node-1]}}</text>-->
+    </view>
+    <view class="first_second">
+      <view class='first_secondbutton' catchtap="help" hover-class='first_second_cover'>求助</view>
+      <view class="first_help" hover-class='addBorder' catchtap='helpKnowledge' >
+        <image class='first_second_image' src='../../images/help.png' hover-class='addBorder'></image>
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <view class="item third" hidden="{{multiProgress.flag||teamProgress.flag || finishedFlag}}">
+    <!-- <scroll-view class="item third" hidden="{{multiProgress.flag||teamProgress.flag || finishedFlag}}">-->
+    <!-- <view class='third_details_firstout'>
+      <image src='../../../images/index/stepbg2.png' class='third_details_first'></image>
+      <view class="step_name " >{{noteName[answer.node-1]}}</view>
+    </view> -->
+
+    <view class=" third_details_second">{{answer.title}}</view>
+
+    <!--若当前题型为选项题，则显示该模块-->
+    <view animation="{{optionAnima}}" class=" third_details_third" hidden="{{answerFlag}}">
+
+      <button wx:for="{{answer.optionList}}" wx:key="*this" class='view1' data-num="{{index+1}}" bindtap='answerClick' hover-class='current'>
+        <view class="">{{abcd[index]}} {{item}} </view>
+      </button>
+
+
+    </view>
+
+    <!--若当前题型为奔跑题或穿戴题，则显示该模块-->
+    <view animation="{{optionAnima}}" class="third_details third_details_forth" hidden="{{scannerFlag}}">
+      <view class='sma' bindtap='scannerButtonClick'></view>
+    </view>
+
+    <!--回答正确或回答错误提示框-->
+    <view class="third_message" hidden='{{messageFlag}}'>
+      <view>
+        {{message}}
+      </view>
+    </view>
+    <!--</scroll-view> -->
+  </view>
+
+
+  <!--团队赛进展-->
+
+  <view class="progress" hidden="{{!teamProgress.flag}}">
+    <!--  <view class="progress">-->
+
+    <!--我方完成情况-->
+    <view class="progress_first">
+      <view class="progress_first_first progress_first_first1">我方完成情况</view>
+      <view class="progress_first_second progress_first_second1 ">
+        <view class="progress_details">
+          奔跑{{teamProgress.ourside.sm}}%
+          <progress percent='{{teamProgress.ourside.sm}}' stroke-width="20" active='{{true}}'></progress>
+        </view>
+        <view class="progress_details">
+          智力{{teamProgress.ourside.xx}}%
+          <progress percent='{{teamProgress.ourside.xx}}' stroke-width="20" active='{{true}}' activeColor='#ffff00'></progress>
+        </view>
+        <view class="progress_details border_bottom">
+          穿戴{{teamProgress.ourside.cd}}%
+          <progress percent='{{teamProgress.ourside.cd}}' stroke-width="20" active='{{true}}' activeColor='#ff0000'></progress>
+        </view>
+      </view>
+    </view>
+    <!--对方完成情况-->
+    <view class="progress_first">
+      <view class="progress_first_first progress_first_first2">对方完成情况</view>
+      <view class="progress_first_second progress_first_second2">
+        <view class="progress_details">
+          奔跑{{teamProgress.opposite.sm}}%
+          <progress percent='{{teamProgress.opposite.sm}}' stroke-width="20" active='{{true}}'></progress>
+        </view>
+        <view class="progress_details">
+          智力{{teamProgress.opposite.xx}}%
+          <progress percent='{{teamProgress.opposite.xx}}' stroke-width="20" active='{{true}}' activeColor='#ffff00'></progress>
+        </view>
+        <view class="progress_details border_bottom">
+          穿戴{{teamProgress.opposite.cd}}%
+          <progress percent='{{teamProgress.opposite.cd}}' stroke-width="20" active='{{true}}' activeColor='#ff0000'></progress>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!--多人赛进展-->
+  <view class="progress_out" hidden="{{!multiProgress.flag}}">
+
+    <view class="progress_special">
+      <view class=" progress_specialtop">完成情况</view>
+      <!--下面的这些可能要放在一个循环中遍历-->
+      <view class=" progress_specialbottom ">
+        <view wx:for="{{multiProgress.ourside.member}}" wx:key="*this" class="progress_specialdetails">
+        <view class="progress_photo">
+          <view class='photo'>
+            <image class='photo_image' src='{{item.avatar}}'></image>
+          </view>
+          <view>
+          {{item.nickname}}：{{item.percent}}%
+          </view>
+        </view>
+     
+          
+          <progress percent='{{item.percent}}' stroke-width="20" active='{{true}}' activeColor='#ffff00'></progress>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+
+  <view hidden="{{!finishedFlag}}" class="wait">
+    <view>
+      您的赛事已完成，
+    </view>
+    <view>
+      请稍作休息等待其他成员！
+    </view>
+  </view>
+
+
+
+  <!--该模块为显示知识链接的内容模块-->
+  <scroll-view scroll-y class="item forth" hidden="{{extendKnowledgeflag}}">
+    <!--遍历显示知识链接的多张图片-->
+    <view wx:for="{{answer.linkImages}}" wx:key="*this">
+      <image src="{{item}}"></image>
+    </view>
+    <!--知识链接的文本-->
+    <view class="knowledge">{{answer.linkText}}
+    </view>
+
+  </scroll-view>
+
+  <!--求助文本-->
+  <view class="helpKnowledge" hidden="{{!helpFlag}}">
+    <view class="helpKnowledge1">
+      <text class='close'>X</text>
+      <text decode="{{true}}" space="{{true}}">
+       求助说明：
+      当您遇到以下情况时，可向工作人员求助
+      1、计时秒表不准确
+      2、出现资源占用或排队的情况（如试穿防护服）
+      3、小程序其它异常情况
+
+      工作人员出示相应的二维码，进行计时调整、暂停、继续等操作，以保证赛事的公平性
+   </text>
+    </view>
+
+  </view>
+
+  <!--该模块为显示知识链接的内容模块-->
+  <view class="pleaseWait" hidden="{{!pauseFlag}}">
+    <view class="pleaseWait_text">
+      请耐心等待
+    </view>
+  </view>
+
+  <view class="item fifth">
+    <!--知识补充不为空时显示该知识补充按钮-->
+    <view class='know' catchtap='knowledge' hidden="{{!knowledgeFlag}}">
+      <image src='../../images/book.png' class='book'> </image>
+      <!--<text>知识补充</text> -->
+    </view>
+    <!--当前比赛为多人赛时，显示多人赛进展-->
+    <view catchlongpress='multiProgress' catchtouchend="multiProgressTouchEnd" hidden="{{matchFlag != 2}}" class='jinzhan'>
+      <image src='../../images/duoren_icon.png' class='duoren'> </image>
+    </view>
+
+    <!--当前比赛为团队赛时，显示团队赛进展-->
+    <view catchlongpress='teamProgress' catchtouchend="teamProgressTouchEnd" hidden="{{matchFlag != 3}}" class='jinzhan'>
+      <image src='../../images/tuant_icon.png' class='tuanti'> </image>
+    </view>
+  </view>
+</view>

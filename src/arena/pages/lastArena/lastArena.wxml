@@ -1,0 +1,35 @@
+<!--pages/arena/index/index.wxml-->
+<view class="container">
+  <view>
+    <view class="item first">
+      <image src='../../images/btibg2.png' class='btibg1'></image>
+      <image src='../../images/lishisaishi.png' class='title_lishisaishi'></image>
+      <!-- <view class="title">历史赛事:</view> -->
+
+    </view>
+
+    <view class="item second">
+
+      <view class="second_text" wx:for="{{arenaList}}" wx:key="*this">
+        <view data-num="{{index}}" bindtap='detailArena' class='viewtext'>
+          {{item.title}}
+          <view wx:if="{{item.winner.nickname==null}}" class="arena">
+            擂主：即将产生
+          </view>
+          <view wx:else class="arena">
+            擂主:
+            <view class='photo'>
+              <image class='photo_image' src='{{item.winner.avatar}}'></image>
+            </view>
+            <!-- {{item.winner.nickname}} -->
+          </view>
+
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+
+</view>

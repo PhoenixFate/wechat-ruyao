@@ -1,0 +1,369 @@
+/* pages/award/award.wxss */
+
+page {
+  background: #98ccfe;
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.top {
+  width: 100%;
+  height: 65rpx;
+  position: fixed;
+  display: flex;
+  background: #4b7efe;
+  z-index: 100;
+  box-shadow: 0 5rpx 35rpx #444;
+}
+
+.bottom {
+  width: 700rpx;
+  height: 60rpx;
+  box-shadow: 0rpx -10rpx 8rpx #444;
+  position: fixed;
+  display: flex;
+  background: -webkit-linear-gradient(top, #80befe, #5993ff, #3c73ff);
+  top: 96%;
+  left: 25rpx;
+}
+
+.awardout {
+  flex-direction: column;
+  display: flex;
+  padding: 72rpx 10rpx 10rpx;
+  height: 1200rpx;
+  width: 700rpx;
+}
+
+.item {
+  height: 130rpx;
+  width: 490rpx;
+  margin: 20rpx 20rpx 20rpx 118rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3rpx 3rpx #444;
+  background: #fff;
+  padding: 0 20rpx;
+}
+
+.first {
+  height: auto;
+  background: #fff;
+}
+
+.first_title {
+  box-shadow: 0 3rpx 3rpx #444;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background: #e5803c;
+  border: 2px solid #fff;
+  border-top: 0;
+  color: #fff;
+}
+
+.first_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.second {
+  height: auto;
+}
+
+.second_title {
+  box-shadow: 0 3rpx 3rpx #444;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background: #e53c3c;
+  border: 2px solid #fff;
+  border-top: 0;
+  color: #fff;
+}
+
+.second_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.third {
+  height: auto;
+  padding-bottom: 50rpx;
+}
+
+.third_title {
+  box-shadow: 0 3rpx 3rpx #444;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background: #01a273;
+  border: 2px solid #fff;
+  border-top: 0;
+  color: #fff;
+}
+
+.forth {
+  height: auto;
+  padding-bottom: 50rpx;
+}
+
+.forth_title {
+  margin-bottom: 30rpx;
+  box-shadow: 0 3rpx 3rpx #444;
+  padding: 20rpx;
+  background: #3e61d1;
+  border: 2px solid #fff;
+  border-top: 0;
+  color: #fff;
+}
+
+.fifth {
+  height: auto;
+  padding-bottom: 50rpx;
+}
+
+.fifth_title {
+  box-shadow: 0 3rpx 3rpx #444;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background: #734dd4;
+  border: 2px solid #fff;
+  border-top: 0;
+  color: #fff;
+}
+
+image {
+  height: 280rpx;
+  width: 280rpx;
+}
+
+.imgaeshow {
+  box-shadow: 0 3rpx 3rpx #444;
+}
+
+.navbar {
+  position: fixed;
+  width: 95%;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  z-index: 100;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  height: 60rpx;
+  left: 2.5%;
+}
+
+/*.text {
+  width: auto;
+  height: 60rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: solid 5rpx #eee;
+  margin-bottom: 10rpx;
+  border-right: none;
+  background: #608dff;
+  border-radius: 7rpx;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+  margin-right: -1rpx;
+  box-shadow: 0 5rpx 3rpx #3e61d1;
+}*/
+
+.text {
+  width: auto;
+  line-height: 60rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 35rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  padding: 0rpx 35rpx;
+  /* background: #56b4b4;
+  border: 1px solid #4471e2;*/
+  border-bottom: 0;
+  box-shadow: 2rpx 2rpx 2rpx #eee;
+}
+
+.text1 {
+  /* border-bottom: 5rpx solid #fafafa;*/
+  background: #e19d9d;
+}
+
+.text2 {
+  /* border-bottom: 5rpx solid #fafafa;*/
+  background: #fbb75f;
+}
+
+.text3 {
+  /*border-bottom: 5rpx solid #fafafa;*/
+  background: #0cf;
+}
+
+.text4 {
+  /* border-bottom: 5rpx solid #fafafa;*/
+  background: #b0d96a;
+}
+
+.text5 {
+  /* border-bottom: 5rpx solid #fafafa;*/
+  background: #c08ae2;
+}
+
+.jiangpin {
+  display: flex;
+}
+
+.float {
+  float: left;
+}
+
+.jiangpinwidth {
+  width: 660rpx;
+}
+
+#third {
+  /* width: 660rpx; */
+  display: flex;
+  flex-direction: column;
+}
+
+.out {
+  min-height: 300rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  border: 6rpx solid #6cf;
+  position: relative;
+}
+
+.saititle {
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  border-bottom: 10rpx solid #98ccfe;
+}
+
+.circle {
+  position: relative;
+  width: 30rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle1 {
+  width: 24rpx;
+  height: 12rpx;
+  border-bottom-right-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  background: #98ccfe;
+}
+
+.circle2 {
+  width: 1rpx;
+  height: 90rpx;
+  border-left: 1px #98ccfe dashed;
+}
+
+.circle3 {
+  width: 24rpx;
+  height: 12rpx;
+  border-top-right-radius: 50rpx;
+  border-top-left-radius: 50rpx;
+  background: #98ccfe;
+}
+
+.jpicon {
+  width: 110rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.jpimg {
+  width: 100rpx;
+  height: 100rpx;
+  border: none;
+}
+
+.sname {
+  padding-left: 20rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jpout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*
+.jp1{
+width:280rpx;
+padding:20rpx 20rpx;
+border:1.5px solid #fdc621;
+margin:20rpx 10rpx;
+border-radius:20rpx;
+background:#61aefc;
+color:#fff;
+font-size:32rpx;
+line-height:50rpx;
+}
+*/
+
+.jp1 {
+  width: 280rpx;
+  padding: 20rpx 20rpx;
+  border: 1px solid #ddd;
+  margin: 20rpx 10rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  box-shadow: 8rpx 7rpx 0rpx #e9e9e9;
+}
+
+.image {
+  width: 280rpx;
+  height: 280rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+  background: #fef2be;
+  border-radius: 10rpx;
+}
+
+.titlecolor {
+  color: #222;
+}
+
+.awardWrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

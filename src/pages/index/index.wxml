@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<!-- <view class="container" style="background-image: url('../../images/index/index_background.png')"> -->
+<view class="container">
+  <view class="userinfo">
+    <image src="../../images/user_bg.png" class='userimg'></image>
+    <view class='userinfo-in'>
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN">头像</button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+
+      </block>
+
+    </view>
+    <view class='username'>
+      <text>{{userInfo.nickName}}</text>
+      <text class='adress'>来自{{userInfo.city?userInfo.city:"火星"}}</text>
+    </view>
+    <view class="scan" bindtap='scan'>
+      <image src='../../images/sysao.png' class='saoma'></image>
+    </view>
+  </view>
+
+  <button class="item first " bindtap='introductionClick' hover-class='item_text_hover0'>
+    <image src="../../images/shuoming_bg.png" class="item_image0"></image>
+    <text class="item_text0">游戏说明及思想</text>
+  </button>
+
+  <view class="item second ">
+    <button class="item_text  " hover-class='item_text_hover' bindtap="individualClick">
+      <image class="item_image " src="../../images/sai1.png"></image>
+      <view class="item_text1">个人赛</view>
+    </button>
+
+    <button class="item_text" hover-class='item_text_hover' bindtap="awardClick">
+      <image class="item_image " src="../../images/sai2.png"></image>
+      <view class="item_text1 ">奖品介绍</view>
+    </button>
+  </view>
+  <view class="item third ">
+
+  <form bindsubmit="challengeClick" report-submit='true' > 
+    <button class="item_text item_text3 " hover-class='item_text_hover' form-type="submit">
+      <image class="item_image " src="../../images/sai3.png"></image>
+      <view class="item_text1 ">挑战赛</view>
+    </button>
+    </form>
+
+    <button class="item_text  " bindtap="rankingListClick" hover-class='item_text_hover'>
+      <image class="item_image  " src="../../images/sai4.png"></image>
+      <view class="item_text1 ">排行榜</view>
+    </button>
+  </view>
+  <view class="item forth">
+    <button class="item_text  " bindtap="multiplayerClick" hover-class='item_text_hover'>
+      <image class="item_image  " src="../../images/sai5.png"></image>
+      <view class="item_text1 ">多人赛</view>
+    </button>
+    <button class="item_text  " bindtap="historyClick" hover-class='item_text_hover'>
+      <image class="item_image   " src="../../images/sai6.png"></image>
+      <view class="item_text1 ">历史记录</view>
+    </button>
+  </view>
+  <view class="item fifth">
+    <view class="fifth_first">
+      <button class=' item_text7' bindtap='teamClick' hover-class='item_text7_hover'>
+        <image class="item_image7 " src="../../images/sai7.png"></image>
+        <view class="item_text1 ">团体赛</view>
+      </button>
+      <button class=' item_text8' bindtap='arenaClick' hover-class='item_text8_hover'>
+        <image class="item_image7 " src="../../images/sai8.png"></image>
+        <view class="item_text1 ">擂台赛</view>
+      </button>
+    </view>
+    <button class=' item_text9' bindtap='settingsClick' hover-class='item_text9_hover'>
+      <image class="item_image9 " src="../../images/sai9.png"></image>
+      <view class="fifth_settings item_text1" bindtap="settingsClick">设置</view>
+    </button>
+  </view>
+
+
+</view>
+<view class="modal-box" hidden="{{modalFlag}}" bindtap="modalHide">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class="message">该项赛事需要您的授权!</view>
+      <button class="lbtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+      <button class="rbtn" bindtap="modalHide">取消</button>
+    </view>
+  </view>
+
+</view>

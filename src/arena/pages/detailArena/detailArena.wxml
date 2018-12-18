@@ -1,0 +1,58 @@
+<!--pages/arena/index/index.wxml-->
+<view class="container">
+  <view class='first_out'>
+    <view class="item first">
+      <image src='../../images/btibg2.png' class='btibg1'></image>
+      <view class="title">{{detailArena.title}}</view>
+    </view>
+  </view>
+  <scroll-view class='out'>
+    <view class="item second">
+      <view>
+        <image src='../../images/jieshao.png' class='ltimg'></image>
+        擂台赛介绍：</view>
+      <view class='niandu'>{{detailArena.intro}}</view>
+      <view>
+        <image src='../../images/time.png' class='ltimg'></image>
+        开始时间：{{detailArena.startDate}}</view>
+      <view>
+        <image src='../../images/time.png' class='ltimg'></image>
+        结束时间：{{detailArena.endDate}}</view>
+    </view>
+
+    <view class="item third">
+      <view>
+        <image src='{{detailArena.awardImage}}' class='jpimg'></image>
+      </view>
+      <view class='mxi'>
+        <view>{{detailArena.awardTitle}}</view>
+        <view>奖品说明:</view>
+        <view>{{detailArena.awardIntro}}</view>
+      </view>
+    </view>
+
+
+    <view class="item forth">
+      <view class='cansai'>
+        <image src='../../images/people.png' class='people'></image>
+        参数人员：{{count}}人
+      </view>
+      <view class='usermessage' scroll-y="{{true}}">
+        <view wx:for="{{users}}" wx:key="*this.user.openid" class="user">
+          <view class='photo'>
+            <image class='photo_image' src='{{item.user.avatar}}'></image>
+          </view>
+          <view class='username'>{{item.user.nickname}}</view>
+          <view class='best'>最好成绩：{{item.score}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <view class="item fifth" hidden='{{!isOpening}}' bindtap='startArena' hover-class='fifth-hover'>
+    打擂
+  </view>
+
+
+</view>

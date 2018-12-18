@@ -1,0 +1,226 @@
+/* pages/base/team/pie/pie.wxss */
+@import "../../../../common/common.wxss";
+page {
+  color: #fff;
+  background: -webkit-linear-gradient(top, #4b7eff, #5f76fe, #6f6bfd) #6f6bfd;
+  background-attachment: scroll;
+}
+
+.item {
+  width: 700rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.item_number{
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first {
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: -webkit-linear-gradient(top, #3fa1fc, #3da2fc, #62b0fa);
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  margin-bottom: 0;
+  box-shadow: 0 -4rpx 4rpx #3c85f4;
+}
+
+.second {
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #5b96fe;
+  margin-top: 0;
+  box-shadow: 0 4rpx 4rpx #3c85f4;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.second_first {
+  width: 700rpx;
+  height: 100rpx;
+  display: flex;
+  background: #4970f3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.second_second {
+  border: 1px solid none;
+  width: 700rpx;
+}
+
+.second_second_icon {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 3rpx 3rpx #3e3ebd;
+  background: #3da2fc;
+  margin-left: 50rpx;
+}
+
+.second_second_text {
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second_second_text_assignment {
+  width: 220rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15rpx;
+   background: #62b0fa;
+}
+
+.second_for {
+  width: 700rpx;
+  height: 130rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #4e84ff;
+  color: #fff;
+  border: none;
+  border-bottom: 1px dashed #6fa4ff;
+}
+
+.third {
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  margin-top: 50rpx;
+}
+
+.third_content {
+  border-bottom: 1px dashed #ccc;
+  width: 694rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.third_first {
+  height: 100rpx;
+  width: 310rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15rpx;
+  background: #fe9d35;
+  box-shadow: 0 4rpx 0rpx #3e3ebd;
+}
+
+.third_second {
+  height: 100rpx;
+  width: 310rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15rpx;
+  box-shadow: 0 4rpx 0rpx #3e3ebd;
+  background: #add14b;
+}
+
+.message_modifyTeamName {
+  height: 600rpx;
+  width: 650rpx;
+  padding: 30rpx;
+  position: absolute;
+  top: 300rpx;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modifyTeamName {
+  width: 500rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50rpx;
+}
+
+.addBorder{
+  border: 3rpx solid #fff;
+}
+
+.addAndMinus{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  font-size: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  height: 400rpx;
+  width: 400rpx;
+  position: absolute;
+  left: 170rpx;
+  top: 400rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.module{
+  position: absolute;
+  height: 120rpx;
+  width: 100%;
+  top:90%;
+}

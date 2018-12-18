@@ -1,0 +1,244 @@
+/* pages/multiplayer/multiplayer.wxss */
+
+page {
+  color: #fff;
+  background: #98ccfe;
+  position: relative;
+  height: 100%;
+}
+
+.container {
+  background-size: 100% 100%;
+}
+
+.container3 {
+  background: rgba(152, 204, 254, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 12%;
+}
+
+.item {
+  height: 150rpx;
+  width: 700rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 15rpx;
+}
+
+.first {
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 340rpx;
+  z-index: 100;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first_text {
+  background: -webkit-linear-gradient(top, #11bff0, #1cd2ea, #19ebee);
+  height: 140rpx;
+  width: 460rpx;
+  font-size: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30rpx;
+  box-shadow: 0 4rpx 4rpx #666;
+  border: 4px solid #bbecff;
+}
+
+.first_text_hover1 {
+  background: #11bff0;
+}
+
+.second_text {
+  background: -webkit-linear-gradient(top, #f29432, #ffb751, #fed26b);
+  border: 4px solid #d9ecff;
+  z-index: 70;
+  box-shadow: 0 4rpx 4rpx #666;
+}
+
+.first_text_hover2 {
+  background: #f29432;
+}
+
+.second_first {
+  width: 460rpx;
+  height: 350rpx;
+  box-shadow: 0 8rpx 6rpx #444;
+  text-align: center;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  color: #444;
+  padding: 0 20rpx;
+}
+
+.second_second {
+  /* width: 600rpx;
+  height: 420rpx;
+  box-shadow: 0 8rpx 6rpx #777;
+  text-align: center;
+  background: #d9ecff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  color: #666;
+  border-radius: 25rpx;
+  border: 10rpx solid #d9ecff;
+  position: absolute;
+  top: 47%;
+  left: 6%;*/
+  width: 460rpx;
+  height: 180rpx;
+  box-shadow: 0 4rpx 6rpx #777;
+  text-align: center;
+  background: #d9ecff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  color: #666;
+  border-radius: 25rpx;
+  border: 8rpx solid #d9ecff;
+  position: absolute;
+  top: 141%;
+  left: 16.5%;
+  z-index: 50;
+}
+
+input {
+  width: 600rpx;
+  height: 190rpx;
+  text-align: center;
+  color: #fff;
+  margin-top: 50rpx;
+}
+
+.message {
+  height: 400rpx;
+  width: 400rpx;
+  position: absolute;
+  left: 170rpx;
+  top: 500rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+}
+
+.modal {
+  position: absolute;
+  left: 8.8%;
+  top: 42%;
+  width: 600rpx;
+  height: 30%;
+  overflow: auto;
+  border: 10rpx solid #bbecff;
+  border-radius: 25rpx;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 6rpx 8rpx #888;
+  z-index: 80;
+}
+
+.modalbut {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button1 {
+  border-radius: 50rpx;
+  padding: 0 65rpx;
+  line-height: 65rpx;
+  color: #688fa5;
+  background: #cbe6ff;
+  margin-right: 30rpx;
+}
+
+.button2 {
+  border-radius: 50rpx;
+  background: #46c871;
+  padding: 0 60rpx;
+  line-height: 65rpx;
+  color: #fff;
+}
+
+.viewin {
+  /* width: 540rpx;
+  height: 400rpx;
+  padding: 20rpx 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 6rpx #cfcfcf;
+  background: #fff;*/
+  width: 400rpx;
+  height: 400rpx;
+  padding: 0rpx 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 6rpx #cfcfcf;
+  background: #fff;
+  color: #888;
+}
+
+.qipao {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  z-index: 60;
+}
+
+.qipaoimg {
+  width: 200rpx;
+  height: 62rpx;
+}
+
+.canjia {
+  position: absolute;
+  left: 30%;
+  top: 39%;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.home {
+  position: absolute;
+  left: 31%;
+  top: 31%;
+  height: 60rpx;
+  width: 55rpx;
+  z-index: 100;
+}
