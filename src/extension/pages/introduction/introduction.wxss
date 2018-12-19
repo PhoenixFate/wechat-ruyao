@@ -99,4 +99,5 @@ text {
   line-height: 50rpx;
   text-align: left;
   padding-left: 12rpx;
+  color:#000;
 }
