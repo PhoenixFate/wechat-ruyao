@@ -5,7 +5,7 @@ page {
   height: 100%;
 }
 
-.container2{
+.container{
   background-size: 100% 100%;
 }
 

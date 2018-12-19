@@ -64,7 +64,7 @@
     <view class="fifth_first">
       <button class=' item_text7' bindtap='teamClick' hover-class='item_text7_hover'>
         <image class="item_image7 " src="../../images/sai7.png"></image>
-        <view class="item_text1 ">团体赛</view>
+        <view class="item_text1 ">团队赛</view>
       </button>
       <button class=' item_text8' bindtap='arenaClick' hover-class='item_text8_hover'>
         <image class="item_image7 " src="../../images/sai8.png"></image>

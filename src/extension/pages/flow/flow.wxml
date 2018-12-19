@@ -1,5 +1,5 @@
 <!--pages/flow/flow.wxml-->
-<view class="container2">
+<view class="container">
   <view>
   <image src='../../images/tiaozhanbg.png' class='tiaozhanbg'></image>
   </view>

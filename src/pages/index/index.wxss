@@ -61,7 +61,7 @@ page {
 .scan {
   display: flex;
   position: absolute;
-  left: 72%;
+  left: 80%;
   top: 6.5%;
 }
 

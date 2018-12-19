@@ -1,7 +1,7 @@
 /* pages/base/house/house.wxss */
 @import "../../../common/common.wxss";
 
-.container2 {
+.container{
   padding-bottom: 0;
   background-repeat: no-repeat;
 }

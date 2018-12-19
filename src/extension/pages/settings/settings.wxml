@@ -1,5 +1,5 @@
 <!--pages/settings/settings.wxml-->
-<view class="container2">
+<view class="container">
   <view class="container3">
     <view class="setout">
       <view class="seticon">

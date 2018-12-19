@@ -1,5 +1,5 @@
 <!--pages/base/bothSides/bothSides.wxml-->
-<view class="container2">
+<view class="container">
   <include src="../../../../common/common.wxml" />
   <view class="item first">
     <view class='first_out'>

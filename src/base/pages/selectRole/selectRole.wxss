@@ -6,10 +6,6 @@ page {
   background: #98ccfe;
 }
 
-.container {
-  background-size: auto 100%;
-}
-
 .whole {
   padding: 190rpx 0rpx 100rpx;
 }

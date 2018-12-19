@@ -3,10 +3,6 @@ page {
   background: #98ccfe;
 }
 
-.container {
-  background-size: auto 100%;
-}
-
 .top {
   width: 100%;
   box-shadow: 0 8rpx 8rpx #555;

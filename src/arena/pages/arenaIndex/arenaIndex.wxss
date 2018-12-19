@@ -93,6 +93,7 @@ page {
 .jlout {
   display: flex;
   width: 568rpx;
+  height: 100%;
   flex-direction: row;
   justify-content: space-between;
   padding: 50rpx;
