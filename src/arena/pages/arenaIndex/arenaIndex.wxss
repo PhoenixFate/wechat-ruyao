@@ -51,6 +51,7 @@ page {
 }
 
 .second {
+  position: relative;
   height: 900rpx;
   background: #5b96fe;
   display: flex;
@@ -97,9 +98,8 @@ page {
   flex-direction: row;
   justify-content: space-between;
   padding: 50rpx;
-  position: fixed;
-  top: 78.5%;
-  left: 45rpx;
+  position: absolute;
+  top: 80%;
 }
 
 .circle {
