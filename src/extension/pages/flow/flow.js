@@ -71,6 +71,7 @@ Page({
       title: "我在乳瑶人防宝中向你发起了挑战，敢不敢来应战!",// 默认是小程序的名称(可以写slogan等)
       path: '/pages/index/index',// 默认是当前页面，必须是以‘/’开头的完整路径
 
+      //回调函数失效--2019.04.26
       success: function (res) {
         console.log(res);
         // 转发成功之后的回调
@@ -118,7 +119,14 @@ Page({
   },
 
   selectFriend:function(){
-    
+    app.setMatchFlag(app.constData.MATCH.INDIVIDUAL);
+    //挑战赛转发成功后跳转到相应的页面
+    wx.navigateTo({
+      url: '/base/pages/selectRole/selectRole',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   }
 
 

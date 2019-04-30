@@ -11,9 +11,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
+	"libVersion": "2.5.1",
 	"appid": "wx306f5f367d756695",
-	"projectname": "ry",
+	"projectname": "ruyao",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
